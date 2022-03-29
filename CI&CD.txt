@@ -1,0 +1,86 @@
+
+Intégration continue
+
+   Les développeurs pratiquant l'intégration continue fusionnent leurs modifications dans la branche principale aussi souvent que possible. Les modifications du développeur sont validées en créant un build et en exécutant des tests automatisés sur le build. Ce faisant, vous évitez les problèmes d'intégration qui peuvent survenir lorsque vous attendez le jour de la publication pour fusionner les modifications dans la branche de publication.
+
+   L'intégration continue met l'accent sur l'automatisation des tests pour vérifier que l'application n'est pas cassée chaque fois que de nouveaux commits sont intégrés dans la branche principale.
+
+ 
+
+Livraison continue
+
+   La livraison continue  est une extension de l'intégration continue puisqu'elle déploie automatiquement toutes les modifications de code dans un environnement de test et/ou de production après l'étape de construction. 
+
+   Cela signifie qu'en plus des tests automatisés, vous disposez d'un processus de publication automatisé et que vous pouvez déployer votre application à tout moment en cliquant sur un bouton.
+
+   En théorie, avec la livraison continue, vous pouvez décider de publier quotidiennement, hebdomadairement, tous les quinze jours ou tout ce qui convient aux besoins de votre entreprise. Toutefois, si vous souhaitez vraiment bénéficier des avantages de la livraison continue, vous devez effectuer le déploiement en production le plus tôt possible pour vous assurer de publier de petits lots faciles à dépanner en cas de problème.
+
+
+
+Déploiement continu
+
+   Le déploiement continu va encore plus loin que la livraison continue. Avec cette pratique, chaque modification qui franchit toutes les étapes de votre pipeline de production est publiée pour vos clients. Il n'y a aucune intervention humaine, et seul un test raté empêchera qu'un nouveau changement soit déployé en production.
+
+   Le déploiement continu est un excellent moyen d'accélérer la boucle de rétroaction avec vos clients et de soulager l'équipe car il n'y a plus de  Release Day. Les développeurs peuvent se concentrer sur la création de logiciels et ils voient leur travail être mis en ligne quelques minutes après avoir fini de travailler dessus.
+
+
+
+Comment les pratiques sont liées les unes aux autres
+
+   Pour le dire simplement, l'intégration continue fait partie à la fois de la livraison continue et du déploiement continu. Et le déploiement continu est comme la livraison continue, sauf que les versions se produisent automatiquement.
+
+
+
+Quels sont les bénéfices de chaque pratique ?
+
+   Nous avons expliqué la différence entre l'intégration continue, la livraison continue et les déploiements continus, mais nous n'avons pas encore examiné les raisons pour lesquelles vous les adopteriez. La mise en œuvre de chaque pratique a un coût évident, mais il est largement compensé par ses avantages.
+ 
+
+
+Intégration continue
+
+  Ce dont vous avez besoin (coût)
+   
+    Votre équipe devra écrire des tests automatisés pour chaque nouvelle fonctionnalité, amélioration ou correction de bogue
+    Vous avez besoin d'un serveur d'intégration continue capable de surveiller le référentiel principal et d'exécuter les tests automatiquement pour chaque nouveau commit poussé.
+    Les développeurs doivent fusionner leurs modifications aussi souvent que possible, au moins une fois par jour.
+
+  Ce que vous gagnez
+
+    Moins de bogues sont expédiés à la production car les régressions sont capturées tôt par les tests automatisés.
+    La construction de la version est facile car tous les problèmes d'intégration ont été résolus tôt.
+    Moins de changement de contexte car les développeurs sont alertés dès qu'ils cassent la construction et peuvent travailler à la réparer avant de passer à une autre tâche.
+    Les coûts de test sont considérablement réduits - votre serveur CI peut exécuter des centaines de tests en quelques secondes.
+    Votre équipe d'assurance qualité passe moins de temps à tester et peut se concentrer sur des améliorations significatives de la culture de la qualité.
+
+Livraison continue
+
+  Ce dont vous avez besoin (coût)
+
+    Vous avez besoin d'une base solide en intégration continue et votre suite de tests doit couvrir suffisamment votre base de code.
+    Les déploiements doivent être automatisés. Le déclencheur est toujours manuel, mais une fois qu'un déploiement est lancé, aucune intervention humaine ne devrait être nécessaire.
+    Votre équipe devra très probablement adopter des indicateurs de fonctionnalité afin que les fonctionnalités incomplètes n'affectent pas les clients en production.
+
+  Ce que vous gagnez
+
+    La complexité du déploiement de logiciels a été supprimée. Votre équipe n'a plus besoin de passer des jours à préparer une version.
+    Vous pouvez publier plus souvent, accélérant ainsi la boucle de rétroaction avec vos clients.
+    Il y a beaucoup moins de pression sur les décisions pour de petits changements, ce qui encourage une itération plus rapide.
+
+Déploiement continu
+
+  Ce dont vous avez besoin (coût)
+
+    Votre culture de test doit être à son meilleur. La qualité de votre suite de tests déterminera la qualité de vos versions.
+    Votre processus de documentation devra suivre le rythme des déploiements.
+    Les indicateurs de fonctionnalité deviennent une partie intégrante du processus de publication des modifications importantes pour vous assurer que vous pouvez vous coordonner avec d'autres départements (support, marketing, relations publiques...).
+
+  Ce que vous gagnez
+
+    Vous pouvez développer plus rapidement car il n'est pas nécessaire d'interrompre le développement pour les versions. Les pipelines de déploiements sont déclenchés automatiquement pour chaque changement.
+    Les versions sont moins risquées et plus faciles à corriger en cas de problème lorsque vous déployez de petits lots de modifications.
+    Les clients voient un flux continu d'améliorations et la qualité augmente chaque jour, au lieu de chaque mois, trimestre ou année.
+
+
+
+Source :  https://www.atlassian.com/continuous-delivery/principles/continuous-integration-vs-delivery-vs-deployment
